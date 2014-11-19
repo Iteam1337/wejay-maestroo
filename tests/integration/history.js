@@ -14,7 +14,7 @@ describe('history', function () {
 
   before(function (done) {
     var connection = db.connect();
-    
+    this.timeout(15000);
     async.series({
       clean: function(next){
         var sql = fs.readFileSync(process.cwd() + '/db/clean.sql').toString();
@@ -25,7 +25,7 @@ describe('history', function () {
         connection.query(sql, next);
       },
       import : function(next){
-        var sql = fs.readFileSync(process.cwd() + '/db/one.sql').toString();
+        var sql = fs.readFileSync(process.cwd() + '/db/import.sql').toString();
         connection.query(sql, next);
       }
     }, done);

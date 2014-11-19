@@ -18,6 +18,7 @@
   "trailing": true,
   "smarttabs": true,
   "maxdepth": 3,
+  "multistr": true,
   "asi" : true,
   "white": false,
   "globals"   : {
