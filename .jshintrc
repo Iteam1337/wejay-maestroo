@@ -21,6 +21,7 @@
   "multistr": true,
   "asi" : true,
   "white": false,
+  "expr": true,
   "globals"   : {
     /* MOCHA */
     "describe"   : false,
