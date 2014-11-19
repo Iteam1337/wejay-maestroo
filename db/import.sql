@@ -1,15 +1,3 @@
-create schema maestroo;
-
-CREATE TABLE maestroo.history (
-HistoryId INT NOT NULL AUTO_INCREMENT,
-SongId VARCHAR(500) NULL,
-SongLength INT NULL,
-RoomId VARCHAR(500) NULL,
-UserId VARCHAR(500) NULL,
-SongPlayed DATETIME NULL,
-PRIMARY KEY (`HistoryId`));
-
-
 INSERT INTO maestroo.history (SongId, SongLength, RoomId, UserId, SongPlayed)
   VALUES ('spotify:track:', 214, 'ITEAM', 94, '2011-08-17 15:14:47.750');
 INSERT INTO maestroo.history (SongId, SongLength, RoomId, UserId, SongPlayed)

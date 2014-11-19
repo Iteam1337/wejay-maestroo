@@ -3,4 +3,7 @@ mysql:
   ports:
     - 3306:3306
   environment:
-    - MYSQL_ROOT_PASSWORD=changeme
+    - MYSQL_ROOT_PASSWORD=keyboardcat
+    - MYSQL_USER=maestroo
+    - MYSQL_PASSWORD=changeme
+    - MYSQL_DATABASE=maestroo
