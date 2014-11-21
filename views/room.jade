@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Connected to #{title} Wejay room
+  p Users: 
+    ul
+    each user in room.users
+      li=user.name
+  p Queue:
+    ul
+    each song in room.queue
+      li=JSON.stringify(song)
