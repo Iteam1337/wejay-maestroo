@@ -1,0 +1,31 @@
+{
+  "name": "spotify-previewbutton",
+  "version": "0.3.0",
+  "description": "Polymer Web component to preview Spotify tracks",
+  "dependencies": {
+    "polymer": "~0.2.3",
+    "spotify-progressbar": "~0.1.0",
+    "spotify-coverart": "~0.0.1"
+  },
+  "authors": [
+    "Rafael de Oleza"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "spotify",
+    "music"
+  ],
+  "homepage": "https://github.com/rafeca/spotify-previewbutton",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "8187de4db46ed60cfe5fe558914a9ec45533464e"
+  },
+  "_source": "git://github.com/rafeca/spotify-previewbutton.git",
+  "_target": "~0.3.0",
+  "_originalSource": "spotify-previewbutton"
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>spotify progressbar</title>
+
+    <script type="text/javascript" src="../platform/platform.js"></script>
+
+    <link rel="import" href="index.html">
+
+    <style>
+      spotify-progressbar {
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Spotify progressbar demo</h1>
+
+    <spotify-progressbar value="0" max="100"></spotify-progressbar>
+
+    <script type="text/javascript">
+      'use strict';
+
+      document.querySelector('spotify-progressbar').addEventListener('change', function (evt) {
+        console.log('Value:', evt.detail);
+      });
+    </script>
+  </body>
+</html>

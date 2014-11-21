@@ -1,0 +1,21 @@
+{
+  "name": "spotify-progressbar",
+  "version": "0.1.0",
+  "description": "Polymer Web component for seekable progress bars",
+  "dependencies": {
+    "polymer": "~0.2.3"
+  },
+  "authors": [
+    "Rafael de Oleza"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "spotify",
+    "progressbar",
+    "range",
+    "progress"
+  ]
+}

@@ -10,3 +10,4 @@ block content
     ul
     each song in room.queue
       li=JSON.stringify(song)
+        spotify-previewbutton(uri=song.spotifyId)
