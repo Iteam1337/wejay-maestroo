@@ -7,7 +7,7 @@ describe('suggestion', function () {
   var users;
 
   beforeEach(function () {
-    users = [{facebookId: '569295764'}];
+    users = [{facebookId: '523648061', '594216665'}];
   });
   
   describe('next', function () {
