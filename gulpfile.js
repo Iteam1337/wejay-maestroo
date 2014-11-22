@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence');
 
 gulp.task('jshint', function () {
-  return gulp.src(['./**/*.js', '!./node_modules/**/*'])
+  return gulp.src(['./**/*.js', '!./node_modules/**/*', '!./public/bower_components/**/*'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
