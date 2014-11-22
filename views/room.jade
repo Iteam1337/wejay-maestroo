@@ -1,13 +1,27 @@
 extends layout
 
 block content
+
   h1 Connected to #{title} Wejay room
-  p Users: 
-    ul
-    each user in room.users
-      li=user.name
-  p Queue:
-    ul
-    each song in room.queue
-      li=JSON.stringify(song)
-        spotify-previewbutton(uri=song.spotifyId)
+  
+  div(layout='row')
+
+    md-list
+      each user in room.users
+        md-item 
+          md-item-content
+            .md-tile-left
+              img.face(width="50", src='https://graph.facebook.com/' + user.facebookId + '/picture')
+            .md-tile-content
+              h3=user.name
+              p=moment(user.lastPlayDate).calendar()
+
+    md-list
+      each song in room.queue
+        md-item
+          md-item-content
+            .md-tile-left
+              img.face(width="50", src='https://graph.facebook.com/' + song.user.facebookId + '/picture')
+            .md-tile-content
+              h3=JSON.stringify(song.spotifyId)
+              p=song.user.name
