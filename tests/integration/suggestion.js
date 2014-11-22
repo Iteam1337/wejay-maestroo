@@ -7,7 +7,7 @@ describe('suggestion', function () {
   var users;
 
   beforeEach(function () {
-    users = [88];
+    users = [{facebookId: '569295764'}];
   });
   
   describe('next', function () {
@@ -18,11 +18,26 @@ describe('suggestion', function () {
       
       this.timeout(5000);
 
-      var userId = users[Math.floor(Math.random()*4)];
-      suggestion.next(userId, startDate, stopDate, function(err, song){
+      suggestion.next(users, startDate, stopDate, function(err, song){
         expect(err).not.to.exist;
         expect(song).to.exist;
-        expect(song.UserId).to.eql(userId);
+        expect(song.FacebookId, 'facebookId' + JSON.stringify(song)).to.exist;
+
+        expect(song.FacebookId).to.equal(users[0].facebookId);
+        done();
+      });
+    });
+
+    it('handles zero songs gracefully', function(done){
+
+      var startDate = moment().subtract(1, 'days').valueOf();
+      var stopDate = moment().subtract(7, 'days').valueOf();
+      
+      this.timeout(5000);
+
+      suggestion.next(users, startDate, stopDate, function(err, song){
+        expect(err).not.to.exist;
+        expect(song).not.to.exist;
         done();
       });
     });

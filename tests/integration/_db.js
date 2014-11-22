@@ -1,4 +1,3 @@
-var chai = require('chai');
 var db = require(process.cwd() + '/lib/db');
 
 describe('db', function () {
