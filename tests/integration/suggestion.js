@@ -20,7 +20,9 @@ describe('suggestion', function () {
 
       suggestion.next(users, startDate, stopDate, function(err, song){
         expect(err).not.to.exist;
+        console.log('song', song)
         expect(song).to.exist;
+        expect(song.SongId).to.exist;
         expect(song.FacebookId, 'facebookId' + JSON.stringify(song)).to.exist;
 
         expect(['523648061', '594216665']).to.include(song.FacebookId);
