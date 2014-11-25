@@ -1,2 +1,2 @@
-DROP TABLE IF EXISTS maestroo.history ;
-DROP TABLE IF EXISTS maestroo.user ;
+DROP TABLE IF EXISTS history ;
+DROP TABLE IF EXISTS user ;
