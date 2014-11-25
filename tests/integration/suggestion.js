@@ -7,7 +7,7 @@ describe('suggestion', function () {
   var users;
 
   beforeEach(function () {
-    users = [{facebookId: '523648061', '594216665'}];
+    users = [{facebookId: '523648061'}, {facebookId: '594216665'}];
   });
   
   describe('next', function () {
@@ -23,7 +23,7 @@ describe('suggestion', function () {
         expect(song).to.exist;
         expect(song.FacebookId, 'facebookId' + JSON.stringify(song)).to.exist;
 
-        expect(song.FacebookId).to.equal(users[0].facebookId);
+        expect(['523648061', '594216665']).to.include(song.FacebookId);
         done();
       });
     });
