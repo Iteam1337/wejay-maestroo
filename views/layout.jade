@@ -13,6 +13,10 @@ html
       div.md-toolbar-tools
         h3 
           span Maestroo
+        h3
+          form(action='/connect')
+            input(name='room', placeholder='Room name')
+            input(type='submit', value='Connect')
 
     md-content.md-padding
       block content
