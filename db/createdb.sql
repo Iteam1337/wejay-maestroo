@@ -1,4 +1,4 @@
-CREATE TABLE history (
+CREATE TABLE maestroo.history (
   HistoryId INT NOT NULL AUTO_INCREMENT,
   SongId VARCHAR(500) NULL,
   SongLength INT NULL,
