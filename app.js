@@ -6,7 +6,7 @@ var users = require('./routes/users');
 var connect = require('./routes/connect');
 
 var app = express();
-app.locals.moment = require('moment');
+app.locals.moment = require('moment'); // used in jade templates
 
 // view engine setup
 app.set('view engine', 'jade');
