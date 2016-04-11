@@ -11,7 +11,7 @@ block content
         md-item 
           md-item-content
             .md-tile-left
-              img.face(width="50", src='https://graph.facebook.com/' + user.facebookId + '/picture')
+              img.face(width="50", src='https://graph.facebook.com/' + user.id + '/picture')
             .md-tile-content
               h3=user.name
               p=moment(user.lastPlayDate).calendar()
@@ -21,7 +21,7 @@ block content
         md-item
           md-item-content
             .md-tile-left
-              img.face(width="50", src='https://graph.facebook.com/' + song.user.facebookId + '/picture')
+              img.face(width="50", src='https://graph.facebook.com/' + song.user.id + '/picture')
             .md-tile-content
               h3=JSON.stringify(song.spotifyId)
               p=song.user.name

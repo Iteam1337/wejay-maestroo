@@ -8,7 +8,7 @@ mysql:
     - MYSQL_PASSWORD=changeme
     - MYSQL_DATABASE=maestroo
 
-web:
+sut:
   build: .
   ports:
     - 8080:80
@@ -16,3 +16,5 @@ web:
     - mysql
   environment:
     - DB_HOST=mysql
+  # command:
+  #   - sh -c "npm install && npm test"

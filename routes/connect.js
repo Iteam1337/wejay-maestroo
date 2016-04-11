@@ -8,8 +8,9 @@ router.get('/', function (req, res) {
   console.log('connect', req.query.room)
   var room = Room.connect(req.query.room, function () {
     room.activeUsers = room.users.filter(function (user) {
-      moment(user.lastPlayDate) > moment().subtract(1, 'hour')
+      return moment(user.lastPlayDate).valueOf() > moment().subtract(1, 'hour').valueOf()
     })
+    console.log('room', room)
     res.render('room', { room: room, title: room.roomName })
   })
 })

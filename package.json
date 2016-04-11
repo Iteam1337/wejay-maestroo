@@ -3,7 +3,8 @@
   "version": "0.5.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test" : "mocha tests/* -R spec"
   },
   "dependencies": {
     "async": "^0.9.0",

@@ -2,8 +2,8 @@ var express = require('express');
 var db = require('../lib/db');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/import', function(req, res, next) {
+/* GET import initial setup. */
+router.get('/', function(req, res, next) {
   if (req.query.sure) {
     db.setup(function(err){
       if (err){
